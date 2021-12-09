@@ -23,7 +23,23 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
+    let rangeArr = []
+    if (start > end){
+        let x = start;
+        while (x >= end){
+            rangeArr.push(x);
+            x--;
+            
+        }
+        return rangeArr;
+    }else{
+         let i = start;
+         while (i <= end){
+             rangeArr.push(i);
+             i++;
+         }
+         return rangeArr;
+    }
     
     
     

@@ -205,6 +205,10 @@ function sortDescending(stringOne, stringTwo) {
     // YOUR CODE ABOVE HERE //
 }
 
+for(var x of array){
+
+}
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&

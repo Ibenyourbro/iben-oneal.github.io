@@ -10,7 +10,7 @@ Bootcamp  Repo
 6) npm install -g opspark
 7) os install
 8) ibenyourbro
-9) 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
+9) Key
 10 ) os test --- os submit
 
 

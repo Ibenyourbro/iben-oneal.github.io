@@ -13,9 +13,15 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    if(typeof base === 'number'){
+        return function(x){
+            return x > base
+        }
+    }else {
+        return function(x){
+            return x > base;
+        }
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -27,7 +33,10 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
+
+    return function(num){
+        return num < base;
+    }
     
     
     
@@ -41,8 +50,10 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
+    let start = startsWith.toLowerCase();
+    return function(string){
+        return string[0].toLowerCase() === start;
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -55,7 +66,10 @@ function createStartsWithFilter(startsWith) {
  */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+    let end = endsWith.toLowerCase();
+    return function(string){
+        return string[string.length -1].toLowerCase() === end;
+    }
     
     
     
@@ -71,8 +85,12 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
+    const modifiedStrings = [];
+    for(let i = 0; i < strings.length; i++){
+        modifiedStrings.push(modify(strings[i]));
+    }
     
-    
+    return modifiedStrings;
     
     
     // YOUR CODE ABOVE HERE //
@@ -89,8 +107,18 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
-    
+    let allPass = strings.length;
+    let passed = [];
+    for(let i = 0; i < strings.length; i++){
+        if(test(strings[i])){
+            passed.push(1)
+        }
+    }
+    if (allPass == passed.length){
+        return true;
+    }else{
+        return false;
+    }
     
     
     // YOUR CODE ABOVE HERE //

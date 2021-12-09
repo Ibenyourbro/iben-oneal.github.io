@@ -15,7 +15,11 @@
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    
+    if(Array.isArray(value)){
+        return true;
+    }else{
+        return false;
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -57,14 +61,14 @@ function isCollection(value) {
  * Given an input value, return the type of the value as a String
  * 
  * Types are one of: 
- *    - "string"
+ *    - "string" ----
  *    - "array"
- *    - "object"
- *    - "undefined"
- *    - "number"
- *    - "boolean"
+ *    - "object" ----
+ *    - "undefined" ---
+ *    - "number" ----
+ *    - "boolean" ----
  *    - "null"
- *    - "function"
+ *    - "function" ---
  *    - "date"
  * 
  * Examples:
@@ -74,9 +78,16 @@ function isCollection(value) {
  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    console.log(value)
+    if(Array.isArray(value)){
+        return 'array';
+    }else if (value === null){
+        return 'null'
+    }else if (value instanceof Date){
+        return 'date'
+    }else {
+        return typeof value;
+    }
     
     // YOUR CODE ABOVE HERE //
 }
