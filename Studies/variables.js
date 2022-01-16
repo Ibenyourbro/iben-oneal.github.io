@@ -21,6 +21,10 @@
  * This variable can be re assigned and does not give an error
  * when two variables have the same name.
  * 
+ * 
+ * 5.Hoisting is a JS mechanism where variables and function declarations are moved to the top of their code before the code is executed.
+ * When it comes to variables this only applies to the var keyword.
+ * 
  * let: Creates a variable that only has block scope. Can be reassigned 
  * 
  * 
@@ -43,4 +47,36 @@ myName = 'rondo';
 console.log(myName) // prints => rondo
 
 //4. Var,let,const
-// 
+// These are the 3 keywords used to create variables in JS. They each function slightly diffrently when it comes to scope,declaration,hoisting and reassigment.
+// Var : Can be declared without a value,has global scope, is always hoisted to the top, and can be reassgined at anytime.
+
+var word;
+word = 'hello';
+console.log(word); // prints => hello
+word = 'dog';
+console.log(word); // prints => dog
+
+// let : Can be declared without a value, is block scoped, does not get hoisted, and can be reassigned at anytime.
+
+let i;
+i = 'HoneyBaked';
+console.log(i); // prints => HoneyBaked
+for(let i = 0; i < 2; i++){
+    console.log(i); // prints => 0
+}
+
+// Const: Can not be delcared without a value, is block scoped, does not get hoisted, can not be reassigned;
+const seven; // produces an error
+const eight = 8;
+eight = 9; // produces an error
+
+//5.Hoisting
+// var is the only variable that gets hoisted, because of this you will not get an error if you call the variable before it is initialied.
+
+console.log(cheese); // prints => undefined
+console.log(turkey); // gives an error that variable is not initalized
+console.log(bacon); // gives an error that variable is not initalized
+
+var cheese = 'Havarti';
+let turkey = 'HoneyBaked';
+const bacon = 'applewoood';
