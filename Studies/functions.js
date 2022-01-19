@@ -24,6 +24,11 @@ function named(name){
 const greeter = function(name){
     console.log(`Wie Gehts ${name}`);
 };
+//Calling a function
+greeter('iben'); // This prints to the console "Wie Gehts iben";
+// In this example 'iben' is the argument being passed into the greeter function
+// The argument 'iben' then takes the place of the parameter (name) in the greeter function and is used in all places (name) is used.
+// So when we call the greeter function with the argument 'iben', (name) becomes "iben";
 
 // Function to not have to have paramters
 const noParams = function(){
