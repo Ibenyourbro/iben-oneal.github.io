@@ -53,6 +53,8 @@ _.typeOf = function(value){
         return 'array';
     }else if(value === null){
         return 'null';
+    }else if(value instanceof Date){
+        return 'date';
     }else{
         return typeof value;
     }
@@ -220,9 +222,8 @@ _.each = function(col,func){
 *   _.unique([1,2,2,4,5,6,5,2]) -> [1,2,4,5,6]
 */
 
-_.unique = function(arr){
-    let unique = [... new Set(arr)];
-    return unique;
+_.unique = function(arr){ 
+    return [... new Set(arr)];
 }
 
 /** _.filter
