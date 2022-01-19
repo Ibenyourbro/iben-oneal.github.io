@@ -17,7 +17,7 @@
  * can change the value and type of said data.
  * 
  * 4.There are 3 distinct ways to create a variable.
- * Var: creates a variable that is hoisted to the global scope.
+ * Var: creates a variable that is hoisted to the function or global scope.
  * This variable can be re assigned and does not give an error
  * when two variables have the same name.
  * 

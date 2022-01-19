@@ -19,3 +19,6 @@ console.log(ted.replaceAll('_',' ')); // prints => 'Welcome to my TED Talk'
 
 let tedArray= ted.split('_'); // returns ['Welcome','to','my','TED','Talk'];
 
+const tedUpper = ted.toUpperCase(); // toUpperCase() changes all the chracters of a string to their uppercase form.
+console.log(tedUpper) // prints => `WELCOME_TO_MY_TED_TALK; 
+

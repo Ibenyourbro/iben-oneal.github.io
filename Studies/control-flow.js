@@ -34,19 +34,19 @@ if (x === 2){
 }
 
 // switch : Useful for comparing large amounts of condtionals where only 1 thing is changing. Basically saying
-// if x is 0 do this, if its 1 do this, if tis 2,3,4,5 do this.
+// if x is 0 do this, if its 1 do this, if it's 2,3,4,5 do this.
 
 switch(x){
     case 0:
-        console.log('false');
+        console.log('to low');
         break;
     case 1:
-        console.log('true');
+        console.log('just right');
         break;
     case 2:
     case 3:
     case 4:
     case 5:
-        console.log('False');
-        break;
+        console.log('to high'); 
+        break; // You can have one result for multiple cases by not adding a break until you are at the final case that expects the same result.
 }

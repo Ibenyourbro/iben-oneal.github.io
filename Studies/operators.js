@@ -39,6 +39,7 @@ if(x == 12){
 if (x % 2 === 0){ // % is an arithmetic Operator that checks what the remainder is after dividng two numbers
     console.log('Well its an even number ');
 }
+console.log(x * 2) // This multiples the value of x by 2.
 //Logical Operators
 if(x < 25 && x > 23){ // Checks if x is less than 25 AND greater than 23;
     console.log('It has to be 24')
@@ -46,6 +47,10 @@ if(x < 25 && x > 23){ // Checks if x is less than 25 AND greater than 23;
 // Unary Operators
 if(typeof x === 'number'){ // typeof accepts 1 operand.
     console.log('Glad we didnt mess that up!')
+}
+
+if(!true){ // the ! operator changes a truthy value to a falsey value and vice versa
+    console.log('This is false');
 }
 //Ternary Operator
 x === 24 ? console.log('I knew it') : console.log('This is all jammed up'); // prints => 'I kenw it'
